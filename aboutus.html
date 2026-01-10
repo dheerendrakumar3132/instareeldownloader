@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - InstaReelDownloader</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <style>
+        /* --- CORE VARIABLES --- */
+        :root {
+            --primary: #6366f1; /* Indigo */
+            --primary-dark: #4f46e5;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --surface: #ffffff;
+            --border: #e2e8f0;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
+        
+        body {
+            background-color: var(--light);
+            color: var(--text-main);
+            line-height: 1.7;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.2s; }
+
+        /* --- HEADER --- */
+        header {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            display: flex; align-items: center; gap: 8px;
+        }
+        
+        .nav-links { display: flex; gap: 20px; }
+        .nav-links a { font-weight: 500; color: var(--text-muted); font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--primary); }
+        
+        @media (max-width: 768px) { .nav-links { display: none; } }
+
+        /* --- ABOUT HERO --- */
+        .about-hero {
+            text-align: center;
+            padding: 80px 20px 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .about-hero h1 { font-size: 2.5rem; color: var(--dark); margin-bottom: 15px; }
+        .about-hero p { color: var(--text-muted); font-size: 1.1rem; }
+
+        /* --- CONTENT CARD --- */
+        .content-wrapper {
+            max-width: 900px;
+            margin: 0 auto 60px;
+            padding: 0 20px;
+        }
+
+        .content-card {
+            background: var(--surface);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            margin-bottom: 30px;
+        }
+
+        h2 { font-size: 1.5rem; color: var(--dark); margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        h2 i { color: var(--primary); }
+        p { color: var(--text-muted); margin-bottom: 20px; font-size: 1rem; }
+
+        /* --- STATS GRID --- */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .stat-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 25px;
+            border-radius: 16px;
+            text-align: center;
+        }
+        .stat-box i { font-size: 2rem; color: var(--primary); margin-bottom: 10px; }
+        .stat-box h3 { font-size: 1.5rem; color: var(--dark); margin-bottom: 5px; }
+        .stat-box span { color: var(--text-muted); font-size: 0.9rem; }
+
+        /* --- FOOTER --- */
+        footer {
+            background: var(--dark);
+            color: #fff;
+            margin-top: auto;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        footer a { color: #94a3b8; margin: 0 10px; }
+        footer a:hover { color: var(--primary); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="brand">
+            <i class="ph-fill ph-instagram-logo" style="color:var(--primary)"></i> InstaReelDownloader
+        </a>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html" style="color:var(--primary)">About Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="about-hero">
+        <h1>Simplifying Media Downloads</h1>
+        <p>InstaReelDownloader is built with a single mission: to make saving social media content easy, fast, and accessible to everyone.</p>
+    </section>
+
+    <main class="content-wrapper">
+        
+        <div class="stats-grid">
+            <div class="stat-box">
+                <i class="ph-duotone ph-lightning"></i>
+                <h3>0.5s</h3>
+                <span>Average Speed</span>
+            </div>
+            <div class="stat-box">
+                <i class="ph-duotone ph-users"></i>
+                <h3>100%</h3>
+                <span>Free to Use</span>
+            </div>
+            <div class="stat-box">
+                <i class="ph-duotone ph-shield-check"></i>
+                <h3>Secure</h3>
+                <span>No Data Storage</span>
+            </div>
+        </div>
+
+        <div class="content-card">
+            <h2><i class="ph-bold ph-rocket-launch"></i> Our Mission</h2>
+            <p>
+                In the digital age, content disappears quickly. We realized that users often want to save their favorite memories, inspiring reels, or educational videos from Instagram to watch offline or share with friends who aren't on social media.
+            </p>
+            <p>
+                However, most existing tools were either full of spammy ads, required paid subscriptions, or produced low-quality watermarked videos.
+            </p>
+            <p>
+                That's why we created <strong>InstaReelDownloader</strong>. We wanted to provide a tool that is clean, fast, and strictly user-focused. Our platform allows you to download content in its original high-definition quality without any annoying watermarks.
+            </p>
+        </div>
+
+        <div class="content-card">
+            <h2><i class="ph-bold ph-lock-key"></i> Privacy First</h2>
+            <p>
+                We believe that privacy is a fundamental right. Unlike other services, we do not require you to create an account, log in with your Instagram credentials, or share your personal details.
+            </p>
+            <p>
+                Our system processes the link you provide, fetches the video directly from the CDN, and serves it to you. We do not store a history of your downloads or keep copies of the videos on our servers.
+            </p>
+        </div>
+
+        <div style="text-align: center; font-size: 0.9rem; color: var(--text-muted); margin-top: 20px;">
+            Note: We are an independent tool and are not affiliated with Instagram or Meta.
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 InstaReelDownloader. All rights reserved.</p>
+        <div style="margin-top: 15px;">
+            <a href="terms of service.html">Terms</a>
+            <a href="privacy policy.html">Privacy</a>
+            <a href="cookie policy.html">Cookies</a>
+            <a href="disclaimer.html">Disclaimer</a>
+        </div>
+    </footer>
+
+</body>
+</html>

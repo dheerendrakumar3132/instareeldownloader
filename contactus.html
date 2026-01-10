@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - InstaReelDownloader</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <style>
+        /* --- CORE VARIABLES --- */
+        :root {
+            --primary: #6366f1; /* Indigo */
+            --primary-dark: #4f46e5;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --surface: #ffffff;
+            --border: #e2e8f0;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
+        
+        body {
+            background-color: var(--light);
+            color: var(--text-main);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.2s; }
+
+        /* --- HEADER --- */
+        header {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            display: flex; align-items: center; gap: 8px;
+        }
+        
+        .nav-links { display: flex; gap: 20px; }
+        .nav-links a { font-weight: 500; color: var(--text-muted); font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--primary); }
+        
+        @media (max-width: 768px) { .nav-links { display: none; } }
+
+        /* --- MAIN SECTION --- */
+        .contact-section {
+            padding: 80px 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .page-header { margin-bottom: 40px; max-width: 600px; }
+        .page-header h1 { font-size: 2.5rem; color: var(--dark); margin-bottom: 15px; }
+        .page-header p { color: var(--text-muted); font-size: 1.1rem; }
+
+        /* --- CONTACT CARD --- */
+        .contact-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 50px 30px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .icon-box {
+            width: 80px; height: 80px;
+            background: #e0e7ff;
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .email-display {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--dark);
+            background: var(--light);
+            padding: 15px 30px;
+            border-radius: 12px;
+            border: 1px dashed var(--border);
+            margin: 20px 0;
+            word-break: break-all;
+        }
+
+        .email-btn {
+            background: var(--primary);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: flex; align-items: center; gap: 10px;
+            margin-top: 10px;
+            box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
+        }
+        .email-btn:hover { background: var(--primary-dark); transform: translateY(-2px); }
+
+        .support-info {
+            margin-top: 40px;
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .info-item { text-align: center; }
+        .info-item h4 { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .info-item span { font-weight: 600; color: var(--dark); }
+
+        /* --- FOOTER --- */
+        footer {
+            background: var(--dark);
+            color: #fff;
+            margin-top: auto;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        footer a { color: #94a3b8; margin: 0 10px; }
+        footer a:hover { color: var(--primary); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="brand">
+            <i class="ph-fill ph-instagram-logo" style="color:var(--primary)"></i> InstaReelDownloader
+        </a>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#how-to">How to Use</a>
+            <a href="index.html#faq">FAQ</a>
+            <a href="contact.html" style="color:var(--primary)">Contact</a>
+        </nav>
+    </header>
+
+    <main class="contact-section">
+        
+        <div class="page-header">
+            <h1>Get in Touch</h1>
+            <p>We do not have a contact form, but we are always available via email. Whether you have a question about features, advertising, or DMCA, feel free to drop us a mail.</p>
+        </div>
+
+        <div class="contact-card">
+            <div class="icon-box">
+                <i class="ph-duotone ph-envelope-open"></i>
+            </div>
+            
+            <h2 style="font-size:1.5rem; margin-bottom:10px;">Email Support</h2>
+            <p style="color:var(--text-muted); max-width:400px; margin-bottom:10px;">
+                Please send your queries directly to our official support email.
+            </p>
+
+            <div class="email-display">
+                support@instareeldowenloader.com
+            </div>
+
+            <a href="mailto:support@instareeldowenloader.com" class="email-btn">
+                <i class="ph-bold ph-paper-plane-right"></i> Send Email Now
+            </a>
+
+            <div class="support-info">
+                <div class="info-item">
+                    <h4>Response Time</h4>
+                    <span>24-48 Hours</span>
+                </div>
+                <div class="info-item">
+                    <h4>Language</h4>
+                    <span>English / Hindi</span>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 InstaReelDownloader. All rights reserved.</p>
+        <div style="margin-top: 15px;">
+            <a href="terms of service.html">Terms</a>
+            <a href="privacy policy.html">Privacy</a>
+            <a href="cookie policy.html">Cookies</a>
+            <a href="disclaimer.html">Disclaimer</a>
+        </div>
+    </footer>
+
+</body>
+</html>
