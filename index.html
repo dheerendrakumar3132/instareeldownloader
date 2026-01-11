@@ -182,7 +182,7 @@
         .final-dl-btn {
             display: block; width: 100%; padding: 12px;
             background: var(--accent); color: white; border-radius: 10px; font-weight: 600;
-            margin-top: 10px; border: none; cursor: pointer;
+            margin-top: 10px; border: none; cursor: pointer; text-align: center;
         }
 
         /* --- 5. CONTENT SECTIONS --- */
@@ -405,7 +405,7 @@
 
     <script>
         // ==========================================
-        //  UPDATED API CONFIGURATION - SENIOR DEV FIX
+        //  SENIOR DEV FIX: UPDATED API CONFIGURATION
         // ==========================================
         const API_KEY = "key_ieu0oumk07177j6c3n4fo"; 
         const API_BASE = "https://cdn.reeldownload.net/fetch";
@@ -456,25 +456,26 @@
             statusMsg.style.color = "var(--text-muted)";
 
             try {
-                // API Call with FIXED ENDPOINT AND KEY
+                // FIXED ENDPOINT AND API_KEY
                 const fetchUrl = `${API_BASE}?url=${encodeURIComponent(url)}&apikey=${API_KEY}`;
                 const req = await fetch(fetchUrl);
                 const res = await req.json();
 
-                if (res.status === "success" && res.data && res.data.url) {
+                // FIX: Look for res.url directly instead of res.data.url
+                if (res.status === "success" && res.url) {
                     loader.style.display = 'none';
                     statusMsg.innerText = "Video Ready!";
                     statusMsg.style.color = "var(--primary)";
                     videoCard.style.display = 'block';
-                    player.src = res.data.url;
-                    finalBtn.href = res.data.download_url || res.data.url;
+                    player.src = res.url;
+                    finalBtn.href = res.proxy_url || res.url;
                 } else {
-                    throw new Error("Video not found or private account.");
+                    throw new Error("Video not found or API issue.");
                 }
 
             } catch (error) {
                 loader.style.display = 'none';
-                statusMsg.innerText = "Error: " + error.message;
+                statusMsg.innerText = "Error: Video not found or account is private.";
                 statusMsg.style.color = "#ef4444";
             } finally {
                 btn.disabled = false;
