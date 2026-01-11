@@ -405,10 +405,10 @@
 
     <script>
         // ==========================================
-        //  UPDATED API CONFIGURATION
+        //  UPDATED API CONFIGURATION - SENIOR DEV FIX
         // ==========================================
         const API_KEY = "key_ieu0oumk07177j6c3n4fo"; 
-        const API_BASE = "https://cdn.reeldownload.net/";
+        const API_BASE = "https://cdn.reeldownload.net/fetch";
 
         // FAQ Logic
         const faqItems = document.querySelectorAll('.faq-item');
@@ -456,7 +456,7 @@
             statusMsg.style.color = "var(--text-muted)";
 
             try {
-                // API Call with NEW KEY
+                // API Call with FIXED ENDPOINT AND KEY
                 const fetchUrl = `${API_BASE}?url=${encodeURIComponent(url)}&apikey=${API_KEY}`;
                 const req = await fetch(fetchUrl);
                 const res = await req.json();
