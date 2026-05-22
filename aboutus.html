@@ -113,15 +113,23 @@
 
         /* --- FOOTER --- */
         footer {
-            background: var(--dark);
-            color: #fff;
-            margin-top: auto;
-            padding: 40px 20px;
-            text-align: center;
-            font-size: 0.9rem;
+            background: var(--dark); color: #fff; margin-top: auto; padding: 60px 20px 20px;
         }
-        footer a { color: #94a3b8; margin: 0 10px; }
-        footer a:hover { color: var(--primary); }
+
+        .footer-content {
+            max-width: 1100px; margin: 0 auto; display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px;
+        }
+
+        .footer-col h4 { font-size: 1.1rem; margin-bottom: 20px; color: white; }
+        .footer-col p { color: #94a3b8; font-size: 0.9rem; margin-bottom: 15px; }
+        .footer-col a { display: block; color: #94a3b8; font-size: 0.9rem; margin-bottom: 10px; }
+        .footer-col a:hover { color: var(--primary); padding-left: 5px; }
+
+        .footer-bottom {
+            border-top: 1px solid #1e293b; padding-top: 20px; text-align: center;
+            font-size: 0.85rem; color: #64748b;
+        }
     </style>
 </head>
 <body>
