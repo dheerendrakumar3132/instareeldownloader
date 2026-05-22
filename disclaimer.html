@@ -17,6 +17,8 @@
         /* --- CORE VARIABLES --- */
         :root {
             --primary: #6366f1; /* Indigo */
+            --primary-dark: #4f46e5;
+            --accent: #ec4899; /* Pink - Added for brand gradient */
             --dark: #0f172a;
             --light: #f8fafc;
             --surface: #ffffff;
@@ -46,20 +48,27 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         .brand {
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--dark);
-            display: flex; align-items: center; gap: 8px;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
         
-        .back-btn {
-            font-size: 0.9rem; font-weight: 600; color: var(--primary);
-            display: flex; align-items: center; gap: 5px;
-        }
-        .back-btn:hover { text-decoration: underline; }
+        .nav-links { display: flex; gap: 20px; }
+        .nav-links a { font-weight: 500; color: var(--text-muted); font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--primary); }
+        
+        @media (max-width: 768px) { .nav-links { display: none; } }
 
         /* --- CONTENT CONTAINER --- */
         .legal-container {
@@ -96,15 +105,31 @@
 
         /* --- FOOTER --- */
         footer {
-            background: var(--dark);
-            color: #fff;
-            margin-top: auto;
-            padding: 40px 20px;
-            text-align: center;
-            font-size: 0.9rem;
+            background: var(--dark); color: #fff; margin-top: auto; padding: 60px 20px 20px; text-align: left;
         }
-        footer a { color: #94a3b8; margin: 0 10px; }
-        footer a:hover { color: var(--primary); }
+
+        .footer-content {
+            max-width: 1100px; margin: 0 auto; display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px;
+        }
+
+        .footer-col h4 { font-size: 1.1rem; margin-bottom: 20px; color: white; }
+        .footer-col p { color: #94a3b8; font-size: 0.9rem; margin-bottom: 15px; }
+        .footer-col a { display: block; color: #94a3b8; font-size: 0.9rem; margin-bottom: 10px; }
+        .footer-col a:hover { color: var(--primary); padding-left: 5px; }
+
+        .footer-bottom {
+            border-top: 1px solid #1e293b; padding-top: 20px; text-align: center;
+            font-size: 0.85rem; color: #64748b;
+        }
+
+        /* Fixed bottom footer paragraph gap */
+        .footer-bottom p {
+            margin-bottom: 5px;
+        }
+        .footer-bottom p:last-child {
+            margin-bottom: 0;
+        }
 
         @media (max-width: 768px) {
             .legal-container { margin: 20px; padding: 25px; }
@@ -118,7 +143,13 @@
         <a href="index.html" class="brand">
             <i class="ph-fill ph-instagram-logo" style="color:var(--primary)"></i> InstaReelDownloader
         </a>
-        <a href="index.html" class="back-btn"><i class="ph-bold ph-arrow-left"></i> Back to Home</a>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#how-to">How to Use</a>
+            <a href="index.html#faq">FAQ</a>
+            <a href="contactus.html">Contact</a>
+            <a href="aboutus.html">About Us</a>
+        </nav>
     </header>
 
     <main class="legal-container">
@@ -159,8 +190,8 @@
     <footer>
         <div class="footer-content">
             <div class="footer-col">
-                <div class="brand" style="margin-bottom:15px; color:white;">
-                    <i class="ph-fill ph-instagram-logo"></i> InstaReelDownloader
+                <div class="brand" style="margin-bottom:15px; color:white; background:none; -webkit-text-fill-color:white;">
+                    <i class="ph-fill ph-instagram-logo" style="color:var(--primary)"></i> InstaReelDownloader
                 </div>
                 <p>The best online tool to download Instagram content for free. Fast, secure, and mobile-friendly.</p>
             </div>
@@ -180,12 +211,12 @@
             <div class="footer-col">
                 <h4>Support</h4>
                 <a href="contactus.html">Report Issue</a>
-                <a href="#faq">FAQ</a>
+                <a href="index.html#faq">FAQ</a>
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 Copyright. InstaReelDownloader. All rights reserved.</p>
-            <p> Designed & Developed By Novaplexes. <p>
+            <p> Designed & Developed By Novaplexes. </p>
             <p style="font-size:0.75rem; margin-top:5px; opacity:0.7;">We are not affiliated with Instagram or Meta.</p>
         </div>
     </footer>
